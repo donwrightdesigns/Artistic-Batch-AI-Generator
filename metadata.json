@@ -1,6 +1,6 @@
 {
-  "name": "ArtRefinery",
-  "description": "A masterful image restylizer for artists seeking inspiration. Upload, analyze, and transform images into 18 distinctive artistic styles.",
+  "name": "Restyler-AI-Pro (beta)",
+  "description": "A simple image restylizer for artists seeking inspiration. Upload, analyze, and transform images into 15+ distinctive artistic styles. curated by an artist. ",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

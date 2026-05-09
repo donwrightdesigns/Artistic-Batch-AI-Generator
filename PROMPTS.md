@@ -12,8 +12,8 @@ Analyze this image and extract its core components for a prompt. Return JSON wit
 - action: What is happening
 - setting: Where it is
 - mood: The emotional tone
-- lighting: Lighting conditions
-- details: Any specific notable details
+- lighting: environmental conditions
+- details: objects, style, interacting elements
 Keep each field concise (1-5 words).
 ```
 **Output Config:** JSON Schema enforced via `responseSchema`.
@@ -23,7 +23,7 @@ Keep each field concise (1-5 words).
 **Context:** Triggered via the "Randomize Logic" button.
 **Prompt:**
 ```text
-Given the current image components: {{analysis}}, generate a set of RANDOMIZED alternative versions that keep the structure but change the content significantly (e.g. if it's a person, make it a robot or mythical creature). Return ONLY JSON.
+Given the current image components: {{analysis}}, generate a set of RANDOMIZED alternative versions that keep the structure but change the content only subtly and only 3 variables at a time.  Return ONLY JSON.
 ```
 
 ## 3. Style Transformation Prompt
@@ -36,4 +36,8 @@ Final prompt: {{basePrompt}} {{style.promptSuffix}}
 ```
 **Inputs:**
 - `basePrompt`: Constructed from the mad-libs variables (subject, action, setting, etc.)
-- `style.promptSuffix`: Specific artistic keywords for each of the 18 styles.
+- `style.promptSuffix`: Specific artistic keywords for each of the styles.
+
+### 4. Advanced Logic Notes
+- **Cinemagram Mode:** Emphasizes high-contrast subject isolation and cinematic depth-of-field. The prompt logic favors atmospheric cues over complex detail to facilitate the 'living photo' aesthetic.
+- **Flex Priority:** Appends an optimization string `(High Priority Optimization: sharp focus, clear silhouettes, minimal noise)` to ensure faster convergence and cleaner output on complex batches.
